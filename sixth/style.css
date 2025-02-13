@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(https://images.pexels.com/photos/1368382/pexels-photo-1368382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+
+button{
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
