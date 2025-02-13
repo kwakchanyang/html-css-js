@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .orange {
+        background: orange;
+      }
+      .pink {
+        background: pink;
+      }
+      .gray {
+        background: gray;
+      }
+      .red {
+        background: red;
+      }
+
+      #con {
+        /* div(블록)이든 b,i(인라인태그)든 flex item으로 변함 */
+        width: 600px;
+        height: 300px;
+        border: 3px solid blue;
+        /* 교차축길이만큼(세로)-자식을 배치하는것이고/ 교차축은 아이템의 개수만큼 존재함 >> align-items복수라는뜻
+         주축(가로)은 부모의 기준점을 바꿔줌.*/
+        display: flex;
+        flex-wrap:wrap ; /*기본값이 no-wrap이라 wrap으로 바꿔줘야함.  >> 그래야 width가 바뀌고 여러행,여러줄이나옴.*/
+        gap: 10px; /*row-gap과 column-gap둘다 줌*/
+        /* flex-direction: column; */
+        /* column일때는 아이템의 순서를 order을 통해서 바꿔줄 수 있다. */
+        /* justify-content: ; -->교차축
+        align-items: stretch; --> 주축 */
+        justify-content: space-evenly; /*start,end,center,space-*/
+        align-items: center; /*start,end,center*/
+      }
+      .item {
+        /* width: calc(100%/4); */
+        /* flex-grow: 1; */
+        width: 45%;
+      }
+      .orange {
+        /* align-self: start; 교차축 방향으로만 배치 */
+        /* flex: 1; */
+        /* 나머지는 최소한의 공간만 가지고 나머지를 얘가 차지하겠다.*/
+        flex-grow: 1;
+        /* order을 가지지 않는 아이템이 가장 위에 있음. 그다음 order순서대로  */
+        /* order: 3; */
+      }
+      .pink {
+        flex-grow: 2;
+        /* order: 4; */
+      }
+      .gray {
+        flex-grow: 2;
+        /* order: 1; */
+      }
+      .red {
+        flex-grow: 1;
+        /* order: 2; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="con">
+      <!-- div전체영역을 다 가짐 -->
+      <div class="item orange">뽀로로</div>
+      <b class="item pink">루피</b>
+      <i class="item gray">포비</i>
+      <div class="item red">뚜뚜</div>
+    </div>
+  </body>
+</html>

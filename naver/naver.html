@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="naver.css" />
   </head>
   <body>
+    <!-- form,a태그는 이동 + button,input, -->
+    <form action="https://www.naver.com"><button>naver</button></form>
     <div id="wrap">
-      <div>
-        <div>네이버를 더 안전하고 편리하게 이용하세요</div>
-        <div id="login-box">
+      <div class="loginWrap">
+        <div id="login-head">
+          <!-- div는(블록태그) 그냥 공간영역을 나눌뿐이니까 글자를 쓸때는 인라인 태그안에 쓰기 <b><span> -->
+            <!--  블록태그() 너비지정 가능==공간확보가능하다/인라인태그는 너비가지지 못함==영역지정을 하지 않는다.-->
+              <!-- span은 아무것도 가지지않은 태그 /길이를 가지지 못하기 때문에 위치를 선정해주고 싶다면 ,정렬시키고 싶다면 p는 바깥쪽여백을 가지고 있음-->
+               <!-- a태그는 padding값만 가질수있음, 인라인태그임 -->
+         <span>네이버를 더 안전하고 편리하게 이용하세요</span>
+        </div>
+        <a class="login-box">
           <div id="naver">NAVER</div>
           <div id="login">로그인</div>
-        </div>
+        </a>
         <div id="find-box">
           <div id="f-id">아이디찾기</div>
           <div>|</div>

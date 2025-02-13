@@ -1,11 +1,15 @@
 #wrap {
+  /* 전체화면에서 어느위치에 있을것인가 */
     border: 1px solid;
     border-color: lightgray;
     border-radius: 5px;
     max-width: 450px;
-    height: 190px;
+    /* 높이를 줄 필요없음 > 여백을 이용해서 높이를 조절하는게 좋음 */
+    /* height: 190px; */
+    /* margin은 같은 위치선상에 있을때(한부모밑에있는 형제태그)끼리 거리를 두는 것이고 padding은 안으로들어간것임*/
   }
   
+  /* 3개 div를 관리 */
   #wrap > div {
     margin-top: 5px;
     padding: 20px;
@@ -17,7 +21,7 @@
     text-align: center;
   }
   
-  #login-box {
+  .login-box {
     border: 1px solid;
     margin-top: 15px;
     padding: 10px;
